@@ -1,0 +1,134 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #070707;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-image: url(OIP.webp);
+    background-size: cover; 
+    background-position:fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #b7f5cd;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.08);
+    text-align:justify;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #0a9edd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#results-container {
+    text-align: left;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    display: none; /* Initially hidden */
+}
+
+/* AQI Color Classes */
+.aqi-1 { background-color: #e8f5e9; border-left: 5px solid #4caf50; } /* Good */
+.aqi-2 { background-color: #fffde7; border-left: 5px solid #ffeb3b; } /* Fair */
+.aqi-3 { background-color: #fff3e0; border-left: 5px solid #ff9800; } /* Moderate */
+.aqi-4 { background-color: #ffebee; border-left: 5px solid #f44336; } /* Poor */
+.aqi-5 { background-color: #f3e5f5; border-left: 5px solid #9c27b0; } /* Very Poor */
+
+#results-container h2, #results-container h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+#results-container ul {
+    padding-left: 20px;
+    color: #555;
+}
+
+.pollutants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.pollutant-card {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.pollutant-card strong {
+    display: block;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+.si{
+    padding: 10px 90px;
+    /* margin: 20px ; */
+}
